@@ -1,10 +1,10 @@
 const {
     logRequest
 } = require('../../logger/logger')
-const {registerUserService} = require('../services/RegisterUserService')
-const {
+const { registerUserService } = require('../services/RegisterUserService')
+/*const {
     emailService
-} = require('../services/EmailService')
+} = require('../services/EmailService')*/
 const {
     MessageResponse
 } = require('../../../helpers/messageResponse')
@@ -32,9 +32,9 @@ export const registerAction = async function (req: any, res: any) {
     /* const sendEmail = await emailService(req.body.name,
         req.body.email) */
 
-        response.data = result
-        response.message = MessageResponse.registerSuccess()
-        return res.status(201).json(response)
-    
+    response.data = result
+    response.message = MessageResponse.registerSuccess()
+    return res.status(201).json(response)
+
 
 }
