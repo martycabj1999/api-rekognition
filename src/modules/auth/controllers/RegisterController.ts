@@ -3,9 +3,6 @@ const {
 } = require('../../logger/logger')
 const {registerUserService} = require('../services/RegisterUserService')
 const {
-    emailService
-} = require('../services/EmailService')
-const {
     MessageResponse
 } = require('../../../helpers/messageResponse')
 

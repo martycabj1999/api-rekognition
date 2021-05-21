@@ -16,11 +16,11 @@ const {
     getUserAction,
     imagesIdentificationAction,
 } = require('./controllers/UserController')
-const {
-    recoverPasswordAction,
-    changeForgibbenPasswordAction,
-    getRestorePasswordAction
-} = require('./controllers/ResetPasswordController')
+// const {
+//     recoverPasswordAction,
+//     changeForgibbenPasswordAction,
+//     getRestorePasswordAction
+// } = require('./controllers/ResetPasswordController')
 const {
     registerAction
 } = require('./controllers/RegisterController')
@@ -57,8 +57,8 @@ router.get('/api/users/avatar', authToken, readAvatarAction)
 router.post('/api/user/avatar', [authToken, multerI], createAvatarAction)
 
 //MAIL
-router.post('/api/recover_password', recoverPasswordAction)
-router.put('/api/restore_password/:token', changeForgibbenPasswordAction)
-router.get('/api/restore_password/:token', getRestorePasswordAction)
+// router.post('/api/recover_password', recoverPasswordAction)
+// router.put('/api/restore_password/:token', changeForgibbenPasswordAction)
+// router.get('/api/restore_password/:token', getRestorePasswordAction)
 
 module.exports = router;

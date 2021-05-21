@@ -42,16 +42,16 @@ export const uploadAudioS3 = (path: string, fileName: string, bucket_folder: str
     file must be a multer file
 */
 export const uploadS3 = (file: any, bucket_folder: string, callback: any, prefix = '') => {
+    
     let s3bucket = new AWS.S3({
         accessKeyId: AWS_S3_ACCESS_KEY,
         secretAccessKey: AWS_S3_SECRET_KEY,
         Bucket: AWS_S3_BUCKET,
     });
 
-    console.log('uploadS3', file, bucket_folder)
     s3bucket.upload({
         Bucket: AWS_S3_BUCKET,
-        Key: bucket_folder + '/' + prefix + file.filename + file.originalname,
+        Key: bucket_folder + '/' + prefix,
         ACL: "public-read",
         Body: fs.readFileSync(file.path),
         ContentType: file.mimetype
