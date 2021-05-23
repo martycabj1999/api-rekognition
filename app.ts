@@ -69,7 +69,6 @@ const randomString = () => {
 
 //Routes
 app.post('/api/users/image_identification', async function (req: any, res: any) {
-    console.log('object')
 
     let response = logRequest(req)
     try {
@@ -79,6 +78,7 @@ app.post('/api/users/image_identification', async function (req: any, res: any) 
         let photoFile: any
 
         const { files } = req
+        console.log('files ===>', files)
         if(!files) return res.status(400).send()
         
         files.forEach((file: any)  => {
@@ -168,7 +168,6 @@ app.post('/api/users/image_identification', async function (req: any, res: any) 
         
 
     } catch (error: any) {
-
         console.log(error)
         logError(req, error)
         response.errors.push(error)
