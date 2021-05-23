@@ -85,11 +85,11 @@ app.post('/api/users/image_identification', multerImages, async function (req: a
         if(!files) return res.status(400).send()
         
         files.forEach((file: any)  => {
-            if (file.name == 'dni_front') {
+            if (file.fieldname == 'dni_front') {
                 dniFront = file
-            } else if (file.name == 'dni_back'){
+            } else if (file.fieldname == 'dni_back'){
                 dniBack = file
-            } else if (file.name == 'photo'){
+            } else if (file.fieldname == 'photo'){
                 photoFile = file
             }
         });
