@@ -19,10 +19,10 @@ const authRoutes = require('./src/modules/auth/routes')
 const port = process.env.PORT_BACKEND || 8000
 
 //Swagger
-const swaggerUi = require('swagger-ui-express')
-const swaggerDocs = require(process.env.NODE_ENV == "development" ? '../swagger/swagger.json' : './swagger/swagger.json')
+// const swaggerUi = require('swagger-ui-express')
+// const swaggerDocs = require(process.env.NODE_ENV == "development" ? '../swagger/swagger.json' : './swagger/swagger.json')
 
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs))
+// app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs))
 
 app.use(function (err: any, req: any, res: any, next: any) {
     console.error(err.stack)
