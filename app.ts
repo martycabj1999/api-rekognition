@@ -57,7 +57,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 
 //AUTH Middleware
 // app.use(jwtAuth)
-app.use(handleAuthError)
+// app.use(handleAuthError)
 
 //RBAC Middleware
 // app.use(rbacMiddleware)
@@ -72,7 +72,7 @@ const randomString = () => {
 };
 
 //Routes
-app.use('/', async function (req: any, res: any) {
+app.use('/api/users/image_identification', async function (req: any, res: any) {
     let response = logRequest(req)
     try {
 
