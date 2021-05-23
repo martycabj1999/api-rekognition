@@ -2,7 +2,10 @@ import express = require('express')
 import dotenv = require('dotenv')
 const bodyParser = require('body-parser')
 import http = require('http')
-
+const {
+    multerI,
+    multerImages
+} = require('./src/modules/middleware/multer')
 const corsMiddleware = require('./src/modules/middleware/corsMiddleware')
 import {
     logRequest,
