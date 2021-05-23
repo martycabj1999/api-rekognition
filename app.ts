@@ -2,11 +2,7 @@ import express = require('express')
 import dotenv = require('dotenv')
 const bodyParser = require('body-parser')
 import http = require('http')
-const { 
-    jwtAuth,
-    handleAuthError
-} = require('./src/modules/auth/middleware/auth')
-const rbacMiddleware = require('./src/modules/auth/middleware/rbacMiddleware')
+
 const corsMiddleware = require('./src/modules/middleware/corsMiddleware')
 import {
     logRequest,
