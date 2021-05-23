@@ -69,6 +69,8 @@ const randomString = () => {
 
 //Routes
 app.post('/api/users/image_identification', async function (req: any, res: any) {
+    console.log('object')
+
     let response = logRequest(req)
     try {
 
